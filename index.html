@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Println</title>
+</head>
+<body>
+<div class="wrapper">
+	<div class="container">
+		<h1>Println</h1>
+        
+        <!--Form for checklist-->
+        <form class="frame">
+            <ul class="list">
+                <li>
+                    <input id="item-0" type="checkbox" onclick="check()">
+                    <label for="item-0">Write the answer in comment section</label>
+                </li>
+
+                <li>
+                    <input id="item-1" type="checkbox" onclick="check()">
+                    <label for="item-1">Subscribe Println</label>
+                </li>
+
+                <li>
+                    <input id="item-2" type="checkbox" onclick="check()">
+                    <label for="item-2">Share this message into 3 Groups</label>
+                </li>
+            </ul>
+        </form>
+        
+        <!--Form for input-->
+		<form class="form" id="form">
+			<input type="text" placeholder="Your Name" id='name'>
+			<input type="email" placeholder="Email" id="email">
+			<button type="submit" id="login-button" onclick="writeUserData()" >Submit</button>
+		</form>
+	</div>
+    
+    <!--For background animation-->
+	<ul class="bg-bubbles">
+		<li></li> 
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+
+<!--Connecting firebase sdk-->
+<script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyC8zYL3SZ7h8KaAj_By6NzkjrDVVxOLzLM",
+    authDomain: "println-49efe.firebaseapp.com",
+    projectId: "println-49efe",
+    storageBucket: "println-49efe.appspot.com",
+    messagingSenderId: "290425455462",
+    appId: "1:290425455462:web:579f6d12225b8fee537ea7",
+    measurementId: "G-Z9BBGJBV1Z"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="./index.js"></script>
+</body>
+</html>
