@@ -7,35 +7,39 @@
     <title>Println</title>
 </head>
 <body>
-<div class="wrapper">
+<div class="wrapper glass">
 	<div class="container">
-		<h1>Println</h1>
+		<img src="./Untitled design (2).png" alt="" srcset="">
         
         <!--Form for checklist-->
         <form class="frame">
             <ul class="list">
                 <li>
-                    <input id="item-0" type="checkbox" onclick="check()">
+                    <input id="item-0" type="checkbox" class="checkbox" onclick="check()">
                     <label for="item-0">Write the answer in comment section</label>
                 </li>
 
                 <li>
-                    <input id="item-1" type="checkbox" onclick="check()">
+                    <input id="item-1" type="checkbox" class="checkbox" onclick="check()">
                     <label for="item-1">Subscribe Println</label>
                 </li>
 
                 <li>
-                    <input id="item-2" type="checkbox" onclick="check()">
+                    <input id="item-2" type="checkbox" class="checkbox" onclick="check()">
                     <label for="item-2">Share this message into 3 Groups</label>
                 </li>
             </ul>
         </form>
+
+        <div class="Thanks">
+            Thanks For Registering
+        </div>
         
         <!--Form for input-->
-		<form class="form" id="form">
-			<input type="text" placeholder="Your Name" id='name'>
-			<input type="email" placeholder="Email" id="email">
-			<button type="submit" id="login-button" onclick="writeUserData()" >Submit</button>
+		<form class="form" id="form" action="sub()">
+			<input type="text" placeholder="Your Name" id='name' required>
+			<input type="email" placeholder="Email" id="email" required>
+			<button type="submit" id="login-button">Submit</button>
 		</form>
 	</div>
     

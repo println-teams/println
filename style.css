@@ -120,7 +120,8 @@ form {
   background-color: white;
   border: 0;
   padding: 10px 15px;
-  color: #2d91c0a4;
+  color: #f10c0ca4;
+  font-weight: 700;
   border-radius: 3px;
   width: 250px;
   cursor: pointer;
@@ -289,7 +290,7 @@ form button:hover {
 label {
   
   color: rgb(255 255 255);
-  font-weight: 690;
+  font-weight: 630;
 
 }
 
@@ -305,4 +306,25 @@ label {
   -moz-osx-font-smoothing: grayscale;
   padding: 50px;
   margin: 1rem auto;
+}
+
+.Thanks{
+  text-align: center;
+  margin-top: 10rem;
+  font-size: 27px;
+  font-weight: 600;
+}
+
+
+img{
+  height: 100%;
+  width: 100;
+  margin-bottom: -5rem;
+  margin-top: -9rem;
+}
+
+.glass {
+  background: url(7650b25….jpg), linear-gradient(#e35553 0%, #7b1d1de3 100%);
+  backdrop-filter: blur(50px);
+	/* Note: backdrop-filter has minimal browser support */
 }
