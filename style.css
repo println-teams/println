@@ -112,6 +112,15 @@ form {
   width: 300px;
   color: #2d91c0a4;
 }
+
+#form input:disabled {
+  cursor: not-allowed;
+}
+
+#form button:disabled {
+  cursor: not-allowed;
+}
+
 #form button {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -288,10 +297,8 @@ form button:hover {
 }
 
 label {
-  
   color: rgb(255 255 255);
   font-weight: 630;
-
 }
 
 .frame {
@@ -308,15 +315,14 @@ label {
   margin: 1rem auto;
 }
 
-.Thanks{
+.Thanks {
   text-align: center;
   margin-top: 10rem;
   font-size: 27px;
   font-weight: 600;
 }
 
-
-img{
+img {
   height: 100%;
   width: 100;
   margin-bottom: -5rem;
@@ -326,5 +332,5 @@ img{
 .glass {
   background: url(7650b25….jpg), linear-gradient(#e35553 0%, #7b1d1de3 100%);
   backdrop-filter: blur(50px);
-	/* Note: backdrop-filter has minimal browser support */
+  /* Note: backdrop-filter has minimal browser support */
 }
