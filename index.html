@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Println</title>
 </head>
 <body>
 <div class="wrapper glass">
 	<div class="container">
-		<img src="./Untitled design (2).png" alt="" srcset="">
+		<img src="./images/Untitled design (2).png" alt="" srcset="">
         
         <!--Form for checklist-->
         <form class="frame">
@@ -37,9 +37,9 @@
         
         <!--Form for input-->
 		<form class="form" id="form" action="sub()">
-			<input  id='name'  disabled type="text" placeholder="Your Name" required>
-			<input id="email" disabled type="email" placeholder="Email" required >
-			<button id="login-button" disabled type="submit" >Submit</button>
+			<input  id='name'  disabled type="text" placeholder="Your Name" required onmouseover="nameHover()">
+			<input id="email" disabled type="email" placeholder="Email" required onmouseover="emailHover()">
+			<button id="login-button" disabled type="submit" onmouseover="submitHover()">Submit</button>
 		</form>
 	</div>
     
@@ -78,6 +78,6 @@
 </script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="./index.js"></script>
+<script src="./js/index.js"></script>
 </body>
 </html>

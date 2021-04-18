@@ -39,7 +39,7 @@ $("#login-button").click(function sub(event) {
 // $('#form').hide();
 
 
-//Condition for showing form
+//Condition for able to write in form
 //var count = 3;
 function check() {
   var count = document.querySelectorAll('input[type="checkbox"]:checked')
@@ -54,6 +54,36 @@ function check() {
     $("#login-button").prop("disabled", false);
   }
 }
+
+
+// // alert message for hover on name
+// function nameHover(){
+//     setTimeout(() => {
+//         if($('#name').prop('disabled')){
+//             alert("Do all the task to fill your name field in the form")
+//         }    
+//     }, 500);
+// }
+
+// // alert message for hover on email
+// function emailHover(){
+//     setTimeout(() => {
+//         if($('#email').prop('disabled')){
+//             alert("Do all the task to fill up your email field in the form")
+//         }    
+//     }, 500);
+// }
+
+
+// // alert message for hover on submit button
+// function submitHover(){
+//     setTimeout(() => {
+//         if($('#login-button').prop('disabled')){
+//             alert("Do all the task to submit the form")
+//         }    
+//     }, 500);
+// }
+
 
 //Connecting firebase
 function writeUserData() {
