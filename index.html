@@ -1,83 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Println</title>
-</head>
-<body>
-<div class="wrapper glass">
-	<div class="container">
-		<img src="./images/Untitled design (2).png" alt="" srcset="">
-        
+  </head>
+  <body>
+    <div class="wrapper glass">
+      <div class="container">
+        <img src="./images/Untitled design (2).png" alt="" srcset="" />
+
         <!--Form for checklist-->
         <form class="frame">
-            <ul class="list">
-                <li>
-                    <input id="item-0" type="checkbox" class="checkbox" onclick="check()">
-                    <label for="item-0">Write the answer in comment section</label>
-                </li>
+          <ul class="list">
+            <li>
+              <input
+                id="item-0"
+                type="checkbox"
+                class="checkbox"
+                onclick="check()"
+              />
+              <label for="item-0">Write the answer in comment section</label>
+            </li>
 
-                <li>
-                    <input id="item-1" type="checkbox" class="checkbox" onclick="check()">
-                    <label for="item-1">Subscribe Println</label>
-                </li>
+            <li>
+              <input
+                id="item-1"
+                type="checkbox"
+                class="checkbox"
+                onclick="check()"
+              />
+              <label for="item-1">Subscribe Println</label>
+            </li>
 
-                <li>
-                    <input id="item-2" type="checkbox" class="checkbox" onclick="check()">
-                    <label for="item-2">Share this message into 3 Groups</label>
-                </li>
-            </ul>
+            <li>
+              <a
+               target="_blank" href="https://api.whatsapp.com//send?text=Subscribe+to+Println+https%3A%2F%2Fbit.ly%2FPrintln"
+              >
+                <label for="item-2">Share this message into 3 Groups</label>
+                <input
+                id="item-2"
+                type="checkbox"
+                class="checkbox"
+                onclick="check()"
+              />
+              </a>
+            </li>
+          </ul>
         </form>
 
-        <div class="Thanks">
-            Thanks For Registering
-        </div>
-        
+        <div class="Thanks">Thanks For Registering</div>
+
         <!--Form for input-->
-		<form class="form" id="form" action="sub()">
-			<input  id='name'  disabled type="text" placeholder="Your Name" required onmouseover="nameHover()">
-			<input id="email" disabled type="email" placeholder="Email" required onmouseover="emailHover()">
-			<button id="login-button" disabled type="submit" onmouseover="submitHover()">Submit</button>
-		</form>
-	</div>
-    
-    <!--For background animation-->
-	<ul class="bg-bubbles">
-		<li></li> 
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-	</ul>
-</div>
+        <form class="form" id="form" action="sub()">
+          <input
+            id="name"
+            disabled
+            type="text"
+            placeholder="Your Name"
+            required
+            onmouseover="nameHover()"
+          />
+          <input
+            id="email"
+            disabled
+            type="email"
+            placeholder="Email"
+            required
+            onmouseover="emailHover()"
+          />
+          <button
+            id="login-button"
+            disabled
+            type="submit"
+            onmouseover="submitHover()"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
 
-<!--Connecting firebase sdk-->
-<script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-analytics.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
-<script>
-  var firebaseConfig = {
-    apiKey: "AIzaSyC8zYL3SZ7h8KaAj_By6NzkjrDVVxOLzLM",
-    authDomain: "println-49efe.firebaseapp.com",
-    projectId: "println-49efe",
-    storageBucket: "println-49efe.appspot.com",
-    messagingSenderId: "290425455462",
-    appId: "1:290425455462:web:579f6d12225b8fee537ea7",
-    measurementId: "G-Z9BBGJBV1Z"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
+      <!--For background animation-->
+      <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="./js/index.js"></script>
-</body>
+    <!--Connecting firebase sdk-->
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyC8zYL3SZ7h8KaAj_By6NzkjrDVVxOLzLM",
+        authDomain: "println-49efe.firebaseapp.com",
+        projectId: "println-49efe",
+        storageBucket: "println-49efe.appspot.com",
+        messagingSenderId: "290425455462",
+        appId: "1:290425455462:web:579f6d12225b8fee537ea7",
+        measurementId: "G-Z9BBGJBV1Z",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/index.js"></script>
+  </body>
 </html>

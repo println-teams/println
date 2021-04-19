@@ -45,7 +45,6 @@ function check() {
   var count = document.querySelectorAll('input[type="checkbox"]:checked')
     .length;
 
-  console.log(count);
 
   // able to write in input field
   if (count == 3) {

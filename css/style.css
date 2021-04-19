@@ -274,6 +274,10 @@ form button:hover {
   cursor: pointer;
 }
 
+.list a {
+  text-decoration: none;
+}
+
 .list input:checked {
   background-color: #0fa600d4;
   color: #fff;
