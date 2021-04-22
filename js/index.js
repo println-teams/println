@@ -29,6 +29,7 @@ $("#login-button").click(function sub(event) {
   if (ValidateForm()) {
     event.preventDefault();
     $("form").fadeOut(500);
+    $(".progress").fadeOut(500);
     $(".wrapper").addClass("form-success");
     $(".Thanks").show();
     //Adding data to firebase
