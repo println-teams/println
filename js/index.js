@@ -1,5 +1,6 @@
 //cheaking weather the form is filled or not
 $(document).ready(function (event) {
+  fillProgressBar();
   $("#login-button").click(function () {
     event.preventDefault();
   });
@@ -28,6 +29,7 @@ $("#login-button").click(function sub(event) {
   if (ValidateForm()) {
     event.preventDefault();
     $("form").fadeOut(500);
+    $(".progress").fadeOut(500);
     $(".wrapper").addClass("form-success");
     $(".Thanks").show();
     //Adding data to firebase
@@ -38,13 +40,11 @@ $("#login-button").click(function sub(event) {
 // //Hiding form
 // $('#form').hide();
 
-
-//Condition for able to write in form
+//Condition for able to write in form and progress bar
 //var count = 3;
 function check() {
   var count = document.querySelectorAll('input[type="checkbox"]:checked')
     .length;
-
 
   // able to write in input field
   if (count == 3) {
@@ -54,13 +54,12 @@ function check() {
   }
 }
 
-
 // // alert message for hover on name
 // function nameHover(){
 //     setTimeout(() => {
 //         if($('#name').prop('disabled')){
 //             alert("Do all the task to fill your name field in the form")
-//         }    
+//         }
 //     }, 500);
 // }
 
@@ -69,20 +68,18 @@ function check() {
 //     setTimeout(() => {
 //         if($('#email').prop('disabled')){
 //             alert("Do all the task to fill up your email field in the form")
-//         }    
+//         }
 //     }, 500);
 // }
-
 
 // // alert message for hover on submit button
 // function submitHover(){
 //     setTimeout(() => {
 //         if($('#login-button').prop('disabled')){
 //             alert("Do all the task to submit the form")
-//         }    
+//         }
 //     }, 500);
 // }
-
 
 //Connecting firebase
 function writeUserData() {
@@ -104,3 +101,32 @@ $(".checkbox").click(function (e) {
     this.checked = !this.checked;
   }
 });
+
+// Logic with checkbox
+
+function fillProgressBar() {
+  var count = 0;
+  var checked = 0;
+  function countBoxes() {
+    count = $("input[type='checkbox']").length;
+    console.log(count);
+  }
+
+  countBoxes();
+  $(":checkbox").click(countBoxes);
+
+  // count checks
+
+  function countChecked() {
+    checked = $("input:checked").length;
+    console.log(checked);
+
+    var percentage = parseInt((checked / count) * 100, 10);
+    $(".progress-bar").progressbar({
+      value: percentage,
+    });
+  }
+
+  countChecked();
+  $(":checkbox").click(countChecked);
+}
