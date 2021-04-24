@@ -45,11 +45,9 @@ $("#login-button").click(function sub(event) {
 // $('#form').hide();
 
 //Condition for able to write in form and progress bar
-//var count = 3;
 function check() {
-  var count = document.querySelectorAll('input[type="checkbox"]:checked')
-    .length;
-
+  var count = document.querySelectorAll('input[type="checkbox"]:checked').length;
+console.log(count);
   // able to write in input field
   if (count == 3) {
     $("#name").prop("disabled", false);
