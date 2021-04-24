@@ -23,6 +23,8 @@ function ValidateForm() {
 
 //Hiding Thank you
 $(".Thanks").hide();
+$(".println-ds").hide();
+$(".println").hide();
 
 $("#login-button").click(function sub(event) {
   ValidateForm();
@@ -32,6 +34,8 @@ $("#login-button").click(function sub(event) {
     $(".progress").fadeOut(500);
     $(".wrapper").addClass("form-success");
     $(".Thanks").show();
+    $(".println-ds").show();
+    $(".println").show();
     //Adding data to firebase
     writeUserData();
   }
