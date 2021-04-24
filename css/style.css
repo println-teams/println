@@ -264,10 +264,9 @@ form button:hover {
 
 /*----------For check Box----------*/
 .list li {
-  padding-bottom: 30px;
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
+
 }
 .list label {
   flex-grow: 1;
@@ -292,6 +291,7 @@ form button:hover {
 
 .list a {
   text-decoration: none;
+  padding: 1rem 0;
 }
 
 .list input:checked {
