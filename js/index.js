@@ -58,40 +58,16 @@ function check() {
   }
 }
 
-// // alert message for hover on name
-// function nameHover(){
-//     setTimeout(() => {
-//         if($('#name').prop('disabled')){
-//             alert("Do all the task to fill your name field in the form")
-//         }
-//     }, 500);
-// }
-
-// // alert message for hover on email
-// function emailHover(){
-//     setTimeout(() => {
-//         if($('#email').prop('disabled')){
-//             alert("Do all the task to fill up your email field in the form")
-//         }
-//     }, 500);
-// }
-
-// // alert message for hover on submit button
-// function submitHover(){
-//     setTimeout(() => {
-//         if($('#login-button').prop('disabled')){
-//             alert("Do all the task to submit the form")
-//         }
-//     }, 500);
-// }
-
 //Connecting firebase
 function writeUserData() {
   var Name = document.getElementById("name").value;
   var Email = document.getElementById("email").value;
+  var Country = document.getElementById("state").value;
+
   database.ref("scam/").push().set({
     name: Name,
     email: Email,
+    Country: Country
   });
 }
 
