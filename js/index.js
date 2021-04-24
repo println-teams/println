@@ -69,6 +69,8 @@ console.log(count);
 }
 
 //Connecting firebase
+var database = firebase.database();
+
 function writeUserData() {
   var Name = document.getElementById("name").value;
   var Email = document.getElementById("email").value;
@@ -150,13 +152,16 @@ function checkMessage() {
 //Link Redirection
 
 $('#link1').click(function(){
-  window.location = "hhttps://www.youtube.com/channel/UC-LDOvSng5nuGptiO0TxyCw";
+  //window.location = "https://www.youtube.com/channel/UC-LDOvSng5nuGptiO0TxyCw";
+  window.open("https://www.youtube.com/channel/UC-LDOvSng5nuGptiO0TxyCw");
 })
 
 $('#link2').click(function(){
-  window.location = "https://www.youtube.com/channel/UC-LDOvSng5nuGptiO0TxyCw";
+  //window.location = "https://www.youtube.com/channel/UC-LDOvSng5nuGptiO0TxyCw";
+  window.open("https://www.youtube.com/channel/UC-LDOvSng5nuGptiO0TxyCw");
 })
 
 $('#link3').click(function(){
-  window.location = "https://api.whatsapp.com//send?text=Subscribe+to+Println+https%3A%2F%2Fbit.ly%2FPrintln";
+  //window.location = "https://api.whatsapp.com//send?text=Subscribe+to+Println+https%3A%2F%2Fbit.ly%2FPrintln";
+  window.open("https://api.whatsapp.com//send?text=Subscribe+to+Println+https%3A%2F%2Fbit.ly%2FPrintln");
 })

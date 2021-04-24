@@ -16,13 +16,13 @@
         <form class="frame">
           <ul class="list">
             <li id="link1">
-              <input
-                id="item-0"
-                type="checkbox"
-                class="checkbox"
-                onclick="check()"
-              />
               <label for="item-0">Write the answer in comment section</label>
+              <input
+              id="item-0"
+              type="checkbox"
+              class="checkbox"
+              onclick="check()"
+            />
             </li>
 
             <li id="link2">
@@ -45,7 +45,6 @@
                   value="off"
                   onclick="check()"
                 />
-              </a>
             </li>
           </ul>
         </form>
@@ -58,8 +57,10 @@
         <div class="Thanks">Thanks For Registering</div>
         <div class="println">Please Checkout our Data Structure Playlist</div>
         <a href="http://bit.ly/println-ds-swag" class="println-ds"
-          >Click Here</a
-        >
+          >
+        <button class="btnsixth">Click Here</button>
+          
+        </a>
 
         <!--Form for input-->
         <form class="form" id="form" action="sub()">
@@ -162,6 +163,8 @@
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
+
+      
     </script>
 
     <script
