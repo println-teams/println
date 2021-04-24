@@ -1,6 +1,5 @@
 //cheaking weather the form is filled or not
 $(document).ready(function (event) {
-  fillProgressBar();
   $("#login-button").click(function () {
     event.preventDefault();
   });
@@ -46,7 +45,7 @@ var incMessage = 0;
 //Condition for able to write in form and progress bar
 function check() {
   var count = document.querySelectorAll('input[type="checkbox"]:checked').length;
-console.log(count);
+
   // able to write in input field
   if (count == 3) {
     $("#name").prop("disabled", false);
@@ -96,32 +95,7 @@ $("input[type=checkbox]").click(function (e) {
 
 // Logic with checkbox
 
-function fillProgressBar() {
-  var count = 0;
-  var checked = 0;
-  function countBoxes() {
-    count = $("input[type='checkbox']").length+2;
-    console.log(count);
-  }
 
-  countBoxes();
-  $(":checkbox").click(countBoxes);
-
-  // count checks
-  function countChecked() {
-    checked = $("input:checked").length;
-    console.log(checked);
-
-    var percentage = parseInt((checked / count) * 100, 10);
-    console.log(percentage);
-    $(".progress-bar").progressbar({
-      value: percentage,
-    });
-  }
-
-  countChecked();
-  $(":checkbox").click(countChecked);
-}
 
 
 
@@ -136,7 +110,7 @@ function checkMessage() {
   $(".checkbox-message").click(function(e){
     if (incMessage == 2) {
       $('#item-2').prop('checked', true); // Checks it
-      console.log("ji");
+
       $(this).unbind(e);
     } else {
       $('.checkbox-message').removeAttr('checked')
@@ -149,19 +123,48 @@ function checkMessage() {
 
 
 
+//For Progress Bar
+function fillProgressBar(actualclick) {
+  var count = 0;
+  var checked = actualclick;
+  function countBoxes() {
+    count = $("input[type='checkbox']").length+2;
+    console.log(count);
+  }
+  countBoxes();
+  $(":checkbox").click(countBoxes);
+  // count checks
+    var percentage = parseInt((checked / count) * 100, 10);
+    $(".progress-bar").progressbar({
+      value: percentage,
+    });
+  $(":checkbox").click(countChecked);
+}
+
+//Counting no of click for progress bar
+click = 0
+function countClick(){
+  click = click+1;
+  actualclick = click/2;
+  fillProgressBar(actualclick)
+}
+
 //Link Redirection
 
 $('#link1').click(function(){
   //window.location = "https://www.youtube.com/channel/UC-LDOvSng5nuGptiO0TxyCw";
-  window.open("https://www.youtube.com/channel/UC-LDOvSng5nuGptiO0TxyCw");
+  //window.open("https://www.youtube.com/channel/UC-LDOvSng5nuGptiO0TxyCw");
+  countClick()
 })
 
 $('#link2').click(function(){
   //window.location = "https://www.youtube.com/channel/UC-LDOvSng5nuGptiO0TxyCw";
-  window.open("https://www.youtube.com/channel/UC-LDOvSng5nuGptiO0TxyCw");
+  //window.open("https://www.youtube.com/channel/UC-LDOvSng5nuGptiO0TxyCw");
+  countClick()
 })
 
 $('#link3').click(function(){
   //window.location = "https://api.whatsapp.com//send?text=Subscribe+to+Println+https%3A%2F%2Fbit.ly%2FPrintln";
-  window.open("https://api.whatsapp.com//send?text=Subscribe+to+Println+https%3A%2F%2Fbit.ly%2FPrintln");
+  //window.open("https://api.whatsapp.com//send?text=Subscribe+to+Println+https%3A%2F%2Fbit.ly%2FPrintln");
+  countClick()
 })
