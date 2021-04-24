@@ -96,7 +96,7 @@ function writeUserData() {
 }
 
 //Preventing checkbox to uncheck
-$(".checkbox").click(function (e) {
+$("input[type=checkbox]").click(function (e) {
   var checkbox = $(this);
   if (checkbox.is(":checked")) {
     //check it
@@ -133,4 +133,23 @@ function fillProgressBar() {
 
   countChecked();
   $(":checkbox").click(countChecked);
+}
+
+
+
+var incMessage = 0;
+
+function checkMessage() {
+  $(".checkbox-message").click(function(e){
+    if (incMessage == 2) {
+      $('#item-2').prop('checked', true); // Checks it
+      console.log("ji");
+      $(this).unbind(e);
+    } else {
+      $('.checkbox-message').removeAttr('checked')
+      e.preventDefault();
+      incMessage++;
+    }
+  })
+    
 }
