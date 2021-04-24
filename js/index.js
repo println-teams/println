@@ -41,8 +41,7 @@ $("#login-button").click(function sub(event) {
   }
 });
 
-// //Hiding form
-// $('#form').hide();
+var incMessage = 0;
 
 //Condition for able to write in form and progress bar
 //var count = 3;
@@ -54,8 +53,21 @@ function check() {
   if (count == 3) {
     $("#name").prop("disabled", false);
     $("#email").prop("disabled", false);
+    $("#state").prop("disabled", false);
     $("#login-button").prop("disabled", false);
   }
+
+  // for sharing link to 3 wp-grp
+  $(".checkbox-message").click(function(e){
+    if (incMessage == 2) {
+      $('#item-2').prop('checked', true); // Checks it
+      $(this).unbind(e);
+    } else {
+      $('.checkbox-message').removeAttr('checked')
+      e.preventDefault();
+      incMessage++;
+    }
+  })
 }
 
 //Connecting firebase
@@ -113,19 +125,3 @@ function fillProgressBar() {
 
 
 
-var incMessage = 0;
-
-function checkMessage() {
-  $(".checkbox-message").click(function(e){
-    if (incMessage == 2) {
-      $('#item-2').prop('checked', true); // Checks it
-      console.log("ji");
-      $(this).unbind(e);
-    } else {
-      $('.checkbox-message').removeAttr('checked')
-      e.preventDefault();
-      incMessage++;
-    }
-  })
-    
-}
