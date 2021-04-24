@@ -112,7 +112,7 @@ function fillProgressBar() {
   var count = 0;
   var checked = 0;
   function countBoxes() {
-    count = $("input[type='checkbox']").length;
+    count = $("input[type='checkbox']").length+2;
     console.log(count);
   }
 
@@ -120,12 +120,12 @@ function fillProgressBar() {
   $(":checkbox").click(countBoxes);
 
   // count checks
-
   function countChecked() {
     checked = $("input:checked").length;
     console.log(checked);
 
     var percentage = parseInt((checked / count) * 100, 10);
+    console.log(percentage);
     $(".progress-bar").progressbar({
       value: percentage,
     });
@@ -140,6 +140,11 @@ function fillProgressBar() {
 var incMessage = 0;
 
 function checkMessage() {
+
+  var groupno = 3 - (incMessage+1)
+
+  document.getElementById("group").innerHTML = `Share this message into ${groupno} Groups`;
+
   $(".checkbox-message").click(function(e){
     if (incMessage == 2) {
       $('#item-2').prop('checked', true); // Checks it
