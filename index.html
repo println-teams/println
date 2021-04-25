@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    meta name="description" content="Get Free Swags from Println" />
     <title>Println</title>
   </head>
 
@@ -15,37 +16,29 @@
         <!--Form for checklist-->
         <form class="frame">
           <ul class="list">
-            <li>
-              <input
-                id="item-0"
-                type="checkbox"
-                class="checkbox"
-                onclick="check()"
-              />
+            <li id="link1">
               <label for="item-0">Write the answer in comment section</label>
+              <input
+              id="item-0"
+              type="checkbox"
+              class="checkbox"
+              onclick="check()"
+            />
             </li>
 
-            <li>
-              <a
-                href="https://www.youtube.com/channel/UC-LDOvSng5nuGptiO0TxyCw"
-                target="_blank"
-              >
+            <li id="link2">
                 <label for="item-1">Subscribe Println</label>
                 <input
                   id="item-1"
                   type="checkbox"
                   class="checkbox"
                   onclick="check()"
+                  
                 />
-              </a>
             </li>
 
-            <li>
-              <a
-                target="_blank"
-                href="https://api.whatsapp.com//send?text=Subscribe+to+Println+https%3A%2F%2Fbit.ly%2FPrintln"
-              >
-                <label for="item-2">Share this message into 3 Groups</label>
+            <li id="link3">
+                <label id="group" for="item-2">Share this message into 3 Groups</label>
                 <input
                   id="item-2"
                   type="checkbox"
@@ -53,7 +46,6 @@
                   value="off"
                   onclick="check()"
                 />
-              </a>
             </li>
           </ul>
         </form>
@@ -66,8 +58,10 @@
         <div class="Thanks">Thanks For Registering</div>
         <div class="println">Please Checkout our Data Structure Playlist</div>
         <a href="http://bit.ly/println-ds-swag" class="println-ds"
-          >Click Here</a
-        >
+          >
+        <button class="btnsixth">Click Here</button>
+          
+        </a>
 
         <!--Form for input-->
         <form class="form" id="form" action="sub()">
@@ -170,6 +164,8 @@
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
+
+      
     </script>
 
     <script

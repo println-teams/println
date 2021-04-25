@@ -264,10 +264,9 @@ form button:hover {
 
 /*----------For check Box----------*/
 .list li {
-  padding-bottom: 30px;
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
+  padding: 0.5rem 0;
+
 }
 .list label {
   flex-grow: 1;
@@ -292,6 +291,7 @@ form button:hover {
 
 .list a {
   text-decoration: none;
+  padding: 1rem 0;
 }
 
 .list input:checked {
@@ -387,4 +387,33 @@ img {
 .ui-progressbar-value {
   background: #0fa600d4;
   height: 300px;
+}
+
+.btn{
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid red;
+  border-radius: 0.6em;
+  color: red;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+.btn :hover{
+  color: #fff;
+  outline: 0;
+}
+.sixth{
+
 }
