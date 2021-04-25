@@ -42,18 +42,18 @@ $("#login-button").click(function sub(event) {
 
 
 
-//Condition for able to write in form and progress bar
-function check() {
-  var count = document.querySelectorAll('input[type="checkbox"]:checked').length;
+// //Condition for able to write in form and progress bar
+// function check() {
+//   var count = document.querySelectorAll('input[type="checkbox"]:checked').length;
 
-  // able to write in input field
-  if (count == 3) {
-    $("#name").prop("disabled", false);
-    $("#email").prop("disabled", false);
-    $("#state").prop("disabled", false);
-    $("#login-button").prop("disabled", false);
-  }
-}
+//   // able to write in input field
+//   if (count == 3) {
+//     $("#name").prop("disabled", false);
+//     $("#email").prop("disabled", false);
+//     $("#state").prop("disabled", false);
+//     $("#login-button").prop("disabled", false);
+//   }
+// }
 
 //Connecting firebase
 var database = firebase.database();
@@ -100,6 +100,16 @@ function checkMessage() {
       incMessage++;
     }
   })
+
+    // able to write in input field (submit form)
+  var count = document.querySelectorAll('input[type="checkbox"]:checked').length;
+  console.log(count);
+  if (count == 3 && incMessage == 2) {
+    $("#name").prop("disabled", false);
+    $("#email").prop("disabled", false);
+    $("#state").prop("disabled", false);
+    $("#login-button").prop("disabled", false);
+  }
     
 }
 
@@ -109,26 +119,22 @@ function checkMessage() {
 function fillProgressBar(actualclick) {
   var count = 0;
   var checked = actualclick;
-  function countBoxes() {
     count = $("input[type='checkbox']").length+2;
     console.log(count);
-  }
-  countBoxes();
-  $(":checkbox").click(countBoxes);
+  
   // count checks
     var percentage = parseInt((checked / count) * 100, 10);
     $(".progress-bar").progressbar({
       value: percentage,
     });
-  $(":checkbox").click(countChecked);
 }
 
 
 //Counting no of click for progress bar
-click = 0
+var click = 0
 function countClick(){
   click = click+1;
-  actualclick = click/2;
+  actualclick = click;
   fillProgressBar(actualclick)
 }
 
