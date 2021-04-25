@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
-    <meta name="description" content="Complete these steps to get Free Swags from Println" />
+    <meta
+      name="description"
+      content="Complete these steps to get Free Swags from Println"
+    />
     <title>Println</title>
   </head>
 
@@ -19,33 +22,32 @@
             <li id="link1">
               <label for="item-0">Write the answer in comment section</label>
               <input
-              id="item-0"
-              type="checkbox"
-              class="checkbox"
-              onclick="check()"
-            />
+                id="item-0"
+                type="checkbox"
+                class="checkbox"
+              />
             </li>
 
             <li id="link2">
-                <label for="item-1">Subscribe Println</label>
-                <input
-                  id="item-1"
-                  type="checkbox"
-                  class="checkbox"
-                  onclick="check()"
-                  
-                />
+              <label for="item-1">Subscribe Println</label>
+              <input
+                id="item-1"
+                type="checkbox"
+                class="checkbox"
+              />
             </li>
 
             <li id="link3">
-                <label id="group" for="item-2">Share this message into 3 Groups</label>
-                <input
-                  id="item-2"
-                  type="checkbox"
-                  class="checkbox-message"
-                  value="off"
-                  onclick="checkMessage()"
-                />
+              <label id="group" for="item-2"
+                >Share this message into 3 Groups</label
+              >
+              <input
+                id="item-2"
+                type="checkbox"
+                class="checkbox-message"
+                value="off"
+                onclick="checkMessage()"
+              />
             </li>
           </ul>
         </form>
@@ -55,13 +57,10 @@
           <div class="progress-bar"></div>
         </div>
 
+        <!-- After Registering -->
         <div class="Thanks">Thanks For Registering</div>
         <div class="println">Please Checkout our Data Structure Playlist</div>
-        <a href="http://bit.ly/println-ds-swag" class="println-ds"
-          >
-        <button class="btnsixth">Click Here</button>
-          
-        </a>
+        <button onclick="dsPlaylist()" class="btnsixth">Click Here</button>
 
         <!--Form for input-->
         <form class="form" id="form" action="sub()">
@@ -121,13 +120,7 @@
             <option value="Uttarakhand">Uttarakhand</option>
             <option value="West Bengal">West Bengal</option>
           </select>
-          <button
-            id="login-button"
-            disabled
-            type="submit"
-          >
-            Submit
-          </button>
+          <button id="login-button" disabled type="submit">Submit</button>
         </form>
       </div>
 
@@ -163,8 +156,6 @@
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
-
-      
     </script>
 
     <script

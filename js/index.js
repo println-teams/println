@@ -1,9 +1,5 @@
 //cheaking weather the form is filled or not
-$(document).ready(function (event) {
-  $("#login-button").click(function () {
-    event.preventDefault();
-  });
-});
+
 
 function ValidateForm() {
   var formInvalid = false;
@@ -22,7 +18,7 @@ function ValidateForm() {
 
 //Hiding Thank you
 $(".Thanks").hide();
-$(".println-ds").hide();
+$(".btnsixth").hide();
 $(".println").hide();
 
 $("#login-button").click(function sub(event) {
@@ -33,27 +29,13 @@ $("#login-button").click(function sub(event) {
     $(".progress").fadeOut(500);
     $(".wrapper").addClass("form-success");
     $(".Thanks").show();
-    $(".println-ds").show();
+    $(".btnsixth").show();
     $(".println").show();
     //Adding data to firebase
     writeUserData();
   }
 });
 
-
-
-// //Condition for able to write in form and progress bar
-// function check() {
-//   var count = document.querySelectorAll('input[type="checkbox"]:checked').length;
-
-//   // able to write in input field
-//   if (count == 3) {
-//     $("#name").prop("disabled", false);
-//     $("#email").prop("disabled", false);
-//     $("#state").prop("disabled", false);
-//     $("#login-button").prop("disabled", false);
-//   }
-// }
 
 //Connecting firebase
 var database = firebase.database();
@@ -157,3 +139,10 @@ $('#link3').click(function(){
   window.open("https://api.whatsapp.com//send?text=Subscribe+to+Println+https%3A%2F%2Fbit.ly%2FPrintln");
   countClick()
 })
+
+
+function dsPlaylist(){
+  console.log("fd");
+  window.open("http://bit.ly/println-ds-swag");
+}
+
