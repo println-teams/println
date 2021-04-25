@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
-    <meta name="description" content="Complete these steps to get Free Swags from Println" />
+    <meta
+      name="description"
+      content="Complete these steps to get Free Swags from Println"
+    />
     <title>Println</title>
   </head>
 
@@ -18,34 +21,25 @@
           <ul class="list">
             <li id="link1">
               <label for="item-0">Write the answer in comment section</label>
-              <input
-              id="item-0"
-              type="checkbox"
-              class="checkbox"
-              onclick="check()"
-            />
+              <input id="item-0" type="checkbox" class="checkbox" />
             </li>
 
             <li id="link2">
-                <label for="item-1">Subscribe Println</label>
-                <input
-                  id="item-1"
-                  type="checkbox"
-                  class="checkbox"
-                  onclick="check()"
-                  
-                />
+              <label for="item-1">Subscribe Println</label>
+              <input id="item-1" type="checkbox" class="checkbox" />
             </li>
 
             <li id="link3">
-                <label id="group" for="item-2">Share this message into 3 Groups</label>
-                <input
-                  id="item-2"
-                  type="checkbox"
-                  class="checkbox-message"
-                  value="off"
-                  onclick="checkMessage()"
-                />
+              <label id="group" for="item-2"
+                >Share this message into 3 Groups</label
+              >
+              <input
+                id="item-2"
+                type="checkbox"
+                class="checkbox-message"
+                value="off"
+                onclick="checkMessage()"
+              />
             </li>
           </ul>
         </form>
@@ -55,13 +49,10 @@
           <div class="progress-bar"></div>
         </div>
 
+        <!-- After Registering -->
         <div class="Thanks">Thanks For Registering</div>
         <div class="println">Please Checkout our Data Structure Playlist</div>
-        <a href="http://bit.ly/println-ds-swag" class="println-ds"
-          >
-        <button class="btnsixth">Click Here</button>
-          
-        </a>
+        <button onclick="dsPlaylist()" class="btnsixth">Click Here</button>
 
         <!--Form for input-->
         <form class="form" id="form" action="sub()">
@@ -121,13 +112,7 @@
             <option value="Uttarakhand">Uttarakhand</option>
             <option value="West Bengal">West Bengal</option>
           </select>
-          <button
-            id="login-button"
-            disabled
-            type="submit"
-          >
-            Submit
-          </button>
+          <button id="login-button" disabled type="submit">Submit</button>
         </form>
       </div>
 
@@ -147,10 +132,17 @@
     </div>
 
     <!--Connecting firebase sdk-->
-    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-database.js"></script>
+
     <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
       var firebaseConfig = {
         apiKey: "AIzaSyC8zYL3SZ7h8KaAj_By6NzkjrDVVxOLzLM",
         authDomain: "println-49efe.firebaseapp.com",
@@ -158,13 +150,12 @@
         storageBucket: "println-49efe.appspot.com",
         messagingSenderId: "290425455462",
         appId: "1:290425455462:web:579f6d12225b8fee537ea7",
+        databaseURL: "https://println-49efe-default-rtdb.firebaseio.com/",
         measurementId: "G-Z9BBGJBV1Z",
       };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
-
-      
     </script>
 
     <script
