@@ -1,9 +1,5 @@
 //cheaking weather the form is filled or not
-$(document).ready(function (event) {
-  $("#login-button").click(function () {
-    event.preventDefault();
-  });
-});
+
 
 function ValidateForm() {
   var formInvalid = false;
@@ -22,7 +18,7 @@ function ValidateForm() {
 
 //Hiding Thank you
 $(".Thanks").hide();
-$(".println-ds").hide();
+$(".btnsixth").hide();
 $(".println").hide();
 
 $("#login-button").click(function sub(event) {
@@ -33,39 +29,13 @@ $("#login-button").click(function sub(event) {
     $(".progress").fadeOut(500);
     $(".wrapper").addClass("form-success");
     $(".Thanks").show();
-    $(".println-ds").show();
+    $(".btnsixth").show();
     $(".println").show();
     //Adding data to firebase
     writeUserData();
   }
 });
 
-var incMessage = 0;
-
-//Condition for able to write in form and progress bar
-function check() {
-  var count = document.querySelectorAll('input[type="checkbox"]:checked').length;
-
-  // able to write in input field
-  if (count == 3) {
-    $("#name").prop("disabled", false);
-    $("#email").prop("disabled", false);
-    $("#state").prop("disabled", false);
-    $("#login-button").prop("disabled", false);
-  }
-
-  // for sharing link to 3 wp-grp
-  $(".checkbox-message").click(function(e){
-    if (incMessage == 2) {
-      $('#item-2').prop('checked', true); // Checks it
-      $(this).unbind(e);
-    } else {
-      $('.checkbox-message').removeAttr('checked')
-      e.preventDefault();
-      incMessage++;
-    }
-  })
-}
 
 //Connecting firebase
 var database = firebase.database();
@@ -93,20 +63,18 @@ $("input[type=checkbox]").click(function (e) {
   }
 });
 
-// Logic with checkbox
 
+
+// Logic with checkbox (for sharing to 3 wp-grp)
 var incMessage = 0;
 
 function checkMessage() {
-
   var groupno = 3 - (incMessage+1)
-
   document.getElementById("group").innerHTML = `Share this message into ${groupno} Groups`;
 
   $(".checkbox-message").click(function(e){
     if (incMessage == 2) {
       $('#item-2').prop('checked', true); // Checks it
-
       $(this).unbind(e);
     } else {
       $('.checkbox-message').removeAttr('checked')
@@ -114,6 +82,16 @@ function checkMessage() {
       incMessage++;
     }
   })
+
+    // able to write in input field (submit form)
+  var count = document.querySelectorAll('input[type="checkbox"]:checked').length;
+  console.log(count);
+  if (count == 3 && incMessage == 2) {
+    $("#name").prop("disabled", false);
+    $("#email").prop("disabled", false);
+    $("#state").prop("disabled", false);
+    $("#login-button").prop("disabled", false);
+  }
     
 }
 
@@ -123,25 +101,22 @@ function checkMessage() {
 function fillProgressBar(actualclick) {
   var count = 0;
   var checked = actualclick;
-  function countBoxes() {
     count = $("input[type='checkbox']").length+2;
     console.log(count);
-  }
-  countBoxes();
-  $(":checkbox").click(countBoxes);
+  
   // count checks
     var percentage = parseInt((checked / count) * 100, 10);
     $(".progress-bar").progressbar({
       value: percentage,
     });
-  $(":checkbox").click(countChecked);
 }
 
+
 //Counting no of click for progress bar
-click = 0
+var click = 0
 function countClick(){
   click = click+1;
-  actualclick = click/2;
+  actualclick = click;
   fillProgressBar(actualclick)
 }
 
@@ -164,3 +139,10 @@ $('#link3').click(function(){
   window.open("https://api.whatsapp.com//send?text=Subscribe+to+Println+https%3A%2F%2Fbit.ly%2FPrintln");
   countClick()
 })
+
+
+function dsPlaylist(){
+  console.log("fd");
+  window.open("http://bit.ly/println-ds-swag");
+}
+
