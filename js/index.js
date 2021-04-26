@@ -146,7 +146,7 @@ $("#link2").click(function () {
 $("#link3").click(function () {
   //window.location = "https://api.whatsapp.com//send?text=Subscribe+to+Println+https%3A%2F%2Fbit.ly%2FPrintln";
   window.open(
-    "https://api.whatsapp.com//send?text=Subscribe+to+Println+https%3A%2F%2Fbit.ly%2FPrintln"
+    "https://api.whatsapp.com//send?text=%2AGreetings%20Everyone%F0%9F%98%83%F0%9F%A4%9A%2C%2A%0A%0A%2ADo%20you%20have%20the%20ability%20to%20solve%20every%20problem%20by%20applying%20its%20fundamentals%F0%9F%8E%8A%3F%20Then%20this%20is%20for%20you%2C%20Println%20is%20here%20with%20Free%20Swags%20%28Stickers%2C%20T-Shirts%2C%20Mugs%29%20in%20exchange%20for%20your%20DS%20knowledge.%20%F0%9F%A4%A9%F0%9F%A4%A9%2A%0A%0A%2A%E2%9C%A8Click%20on%20this%20link%20for%20getting%20free%20swags%3A%20http%3A%2F%2Fbit.ly%2Fprintln-free-swag%2A"
   );
 });
 
