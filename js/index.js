@@ -41,12 +41,12 @@ var database = firebase.database();
 function writeUserData() {
   var Name = document.getElementById("name").value;
   var Email = document.getElementById("email").value;
-  var Country = document.getElementById("state").value;
+  var State = document.getElementById("state").value;
 
   database.ref("scam/").push().set({
     name: Name,
     email: Email,
-    Country: Country,
+    State: State,
   });
 }
 
