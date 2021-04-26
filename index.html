@@ -1,83 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <meta
+      name="description"
+      content="Complete these steps to get Free Swags from Println"
+    />
     <title>Println</title>
-</head>
-<body>
-<div class="wrapper glass">
-	<div class="container">
-		<img src="./Untitled design (2).png" alt="" srcset="">
-        
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <link rel="shortcut icon" href="favicon.ico?" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+
+  <body>
+    <div class="wrapper glass">
+      <div class="container">
+        <img src="./images/Untitled design (2).png" alt="" srcset="" />
+
         <!--Form for checklist-->
         <form class="frame">
-            <ul class="list">
-                <li>
-                    <input id="item-0" type="checkbox" class="checkbox" onclick="check()">
-                    <label for="item-0">Write the answer in comment section</label>
-                </li>
+          <ul class="list">
+            <li id="link1">
+              <label for="item-0">Write the answer in comment section</label>
+              <input
+                id="item-0"
+                type="checkbox"
+                class="checkbox"
+                onclick="check()"
+              />
+            </li>
 
-                <li>
-                    <input id="item-1" type="checkbox" class="checkbox" onclick="check()">
-                    <label for="item-1">Subscribe Println</label>
-                </li>
+            <li id="link2">
+              <label for="item-1">Subscribe Println</label>
+              <input
+                id="item-1"
+                type="checkbox"
+                class="checkbox"
+                onclick="check()"
+              />
+            </li>
 
-                <li>
-                    <input id="item-2" type="checkbox" class="checkbox" onclick="check()">
-                    <label for="item-2">Share this message into 3 Groups</label>
-                </li>
-            </ul>
+            <li id="link3">
+              <label id="group" for="item-2"
+                >Share this message into 3 Groups</label
+              >
+              <input
+                id="item-2"
+                type="checkbox"
+                class="checkbox-message"
+                value="off"
+                onclick="checkMessage()"
+              />
+            </li>
+          </ul>
         </form>
 
-        <div class="Thanks">
-            Thanks For Registering
+        <!-- progress-bar -->
+        <div class="progress">
+          <div class="progress-bar"></div>
         </div>
-        
+
+        <!-- After Registering -->
+        <div class="Thanks">Thanks For Registering</div>
+        <div class="println">Please Checkout our Data Structure Playlist</div>
+        <button onclick="dsPlaylist()" class="btnsixth">Click Here</button>
+
         <!--Form for input-->
-		<form class="form" id="form" action="sub()">
-			<input  id='name'  disabled type="text" placeholder="Your Name" required>
-			<input id="email" disabled type="email" placeholder="Email" required >
-			<button id="login-button" disabled type="submit" >Submit</button>
-		</form>
-	</div>
-    
-    <!--For background animation-->
-	<ul class="bg-bubbles">
-		<li></li> 
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-	</ul>
-</div>
+        <form class="form" id="form" action="sub()">
+          <input
+            id="name"
+            disabled
+            type="text"
+            placeholder="Your Name"
+            required
+          />
+          <input
+            id="email"
+            disabled
+            type="email"
+            placeholder="Email"
+            required
+          />
+          <select name="state" id="state" class="form-control" disabled>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Andaman and Nicobar Islands">
+              Andaman and Nicobar Islands
+            </option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Dadar and Nagar Haveli">
+              Dadar and Nagar Haveli
+            </option>
+            <option value="Daman and Diu">Daman and Diu</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Lakshadweep">Lakshadweep</option>
+            <option value="Puducherry">Puducherry</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Manipur">Manipur</option>
+            <option value="Meghalaya">Meghalaya</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tripura">Tripura</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="West Bengal">West Bengal</option>
+          </select>
+          <button id="login-button" disabled type="submit">Submit</button>
+        </form>
+      </div>
 
-<!--Connecting firebase sdk-->
-<script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-analytics.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
-<script>
-  var firebaseConfig = {
-    apiKey: "AIzaSyC8zYL3SZ7h8KaAj_By6NzkjrDVVxOLzLM",
-    authDomain: "println-49efe.firebaseapp.com",
-    projectId: "println-49efe",
-    storageBucket: "println-49efe.appspot.com",
-    messagingSenderId: "290425455462",
-    appId: "1:290425455462:web:579f6d12225b8fee537ea7",
-    measurementId: "G-Z9BBGJBV1Z"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
+      <!--For background animation-->
+      <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="./index.js"></script>
-</body>
+    <!--Connecting firebase sdk-->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-database.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyC8zYL3SZ7h8KaAj_By6NzkjrDVVxOLzLM",
+        authDomain: "println-49efe.firebaseapp.com",
+        projectId: "println-49efe",
+        storageBucket: "println-49efe.appspot.com",
+        messagingSenderId: "290425455462",
+        appId: "1:290425455462:web:579f6d12225b8fee537ea7",
+        databaseURL: "https://println-49efe-default-rtdb.firebaseio.com/",
+        measurementId: "G-Z9BBGJBV1Z",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
 </html>
