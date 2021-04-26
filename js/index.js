@@ -135,7 +135,7 @@ $("input[type=checkbox]").click(function (e) {
 
 $("#link1").click(function () {
   //window.location = "https://www.youtube.com/channel/UC-LDOvSng5nuGptiO0TxyCw";
-  window.open("https://www.youtube.com/channel/UC-LDOvSng5nuGptiO0TxyCw");
+  window.open("https://youtu.be/mGWlIB7-dnc");
 });
 
 $("#link2").click(function () {
