@@ -60,6 +60,7 @@ function checkMessage() {
   ).innerHTML = `Share this message into ${groupno} Groups`;
 
   $(".checkbox-message").click(function (e) {
+    console.log(incMessage);
     if (incMessage == 2) {
       $("#item-2").prop("checked", true); // Checks it
       $(this).unbind(e);
@@ -69,11 +70,25 @@ function checkMessage() {
       incMessage++;
     }
   });
-
-  // able to write in input field (submit form)
+  // able to write in input field (submit form) for share message checkbox
   var count = document.querySelectorAll('input[type="checkbox"]:checked')
     .length;
   console.log(count);
+  console.log(incMessage);
+  if (count == 3 && incMessage == 2) {
+    $("#name").prop("disabled", false);
+    $("#email").prop("disabled", false);
+    $("#state").prop("disabled", false);
+    $("#login-button").prop("disabled", false);
+  }
+}
+
+// able to write in input field (submit form) for est 2 checkbox
+function check() {
+  var count = document.querySelectorAll('input[type="checkbox"]:checked')
+    .length;
+  console.log(count);
+  console.log(incMessage);
   if (count == 3 && incMessage == 2) {
     $("#name").prop("disabled", false);
     $("#email").prop("disabled", false);
